@@ -1,0 +1,13 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary Files & Browser Profiles
+*.tmp
+*.log
+.chrome_tmp/
+
+# Editor and IDE Files
+.vscode/
+.idea/

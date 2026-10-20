@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KOCHKA — Global Digital Museum of Classical & Contemporary Feline Art</title>
+  <meta name="description" content="KOCHKA: A global digital museum of classical and contemporary feline art across centuries. Prepared for Antigravity web architecture.">
+  
+  <!-- LOCAL HIGH-PERFORMANCE FONTS PRELOAD (Zero Latency) -->
+  <link rel="preload" href="assets/Cinzel.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="assets/Poppins-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- STYLESHEET -->
+  <link rel="stylesheet" href="style.css">
+
+  <script>
+    (function() {
+      var s = window.location.search;
+      var lang = (s.indexOf('lang=ar') !== -1) ? 'ar' : ((s.indexOf('lang=ru') !== -1) ? 'ru' : (s.indexOf('lang=en') !== -1 ? 'en' : (localStorage.getItem('kochka-lang') || 'en')));
+      if (lang === 'ar') {
+        document.documentElement.lang = 'ar';
+        document.documentElement.dir = 'rtl';
+        document.documentElement.classList.add('lang-ar');
+      } else {
+        document.documentElement.lang = lang;
+        document.documentElement.dir = 'ltr';
+      }
+      if (s.indexOf('theme=daylight') !== -1) {
+        document.documentElement.classList.add('daylight-mode');
+      }
+      if (s.indexOf('modal=menu') !== -1) document.documentElement.classList.add('show-menu-modal');
+      if (s.indexOf('modal=tickets') !== -1) document.documentElement.classList.add('show-tickets-modal');
+      if (s.indexOf('modal=artwork') !== -1) document.documentElement.classList.add('show-artwork-modal');
+      if (s.indexOf('modal=exhibitions') !== -1) document.documentElement.classList.add('show-exhibitions-modal');
+    })();
+  </script>
+</head>
+<body>
+
+  <!-- ============================================================
+       CLASSIC FANCY MUSEUM PRELOADER & GRAND UNVEIL
+       ============================================================ -->
+  <aside class="museum-preloader" id="museum-preloader" aria-label="Kochka Heritage Art Hall Loading Sanctuary">
+    <!-- Velvet Museum Curtains -->
+    <div class="preloader-curtain left" aria-hidden="true"></div>
+    <div class="preloader-curtain right" aria-hidden="true"></div>
+    <div class="preloader-seam-light" aria-hidden="true"></div>
+    <div class="preloader-ambient-glow" aria-hidden="true"></div>
+
+    <!-- Central Aristocratic Content Stage -->
+    <div class="preloader-stage">
+      <!-- Gilded Crest Medallion -->
+      <div class="preloader-crest">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="preloaderGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFEAA7" />
+              <stop offset="30%" stop-color="#D4AF37" />
+              <stop offset="70%" stop-color="#AA771C" />
+              <stop offset="100%" stop-color="#85580F" />
+            </linearGradient>
+          </defs>
+          <circle cx="60" cy="60" r="55" stroke="rgba(212, 175, 55, 0.25)" stroke-width="1" stroke-dasharray="2 6" />
+          <circle id="preloader-ring" class="preloader-progress-ring" cx="60" cy="60" r="49" stroke="url(#preloaderGoldGrad)" stroke-width="2" stroke-linecap="round" stroke-dasharray="307" stroke-dashoffset="307" transform="rotate(-90 60 60)" />
+          <circle cx="60" cy="60" r="44" stroke="rgba(212, 175, 55, 0.35)" stroke-width="0.8" />
+          
+          <!-- Crown at top -->
+          <path d="M52 29 L55 35 L60 30 L65 35 L68 29 L66 38 L54 38 Z" fill="url(#preloaderGoldGrad)" />
+          <circle cx="60" cy="28" r="1.6" fill="#FFF0A6" />
+          <circle cx="52" cy="27.5" r="1.3" fill="#FFF0A6" />
+          <circle cx="68" cy="27.5" r="1.3" fill="#FFF0A6" />
+          
+          <!-- Aristocratic Cat Profile -->
+          <path d="M44 36 L48 43 C50 43 53 38 56 34 L60 43 C64 47 65 54 64 63 C63 70 65 74 68 76 L44 76 C44 73 43 70 42 66 C41 62 43 59 44 57 C42 56 41 54 41 52 C41 50 43 47 45 45 C45 42 44 38 44 36 Z" fill="url(#preloaderGoldGrad)" />
+          <circle cx="47" cy="48" r="0.9" fill="#FFF0A6" />
+          <path d="M42 64 C48 66 58 66 64 64 L63 68 C57 70 47 70 42 68 Z" fill="#FFEAA7" />
+          <circle cx="53" cy="71" r="2.2" fill="#F42E07" stroke="#FFF0A6" stroke-width="0.6" />
+          
+          <!-- Laurels -->
+          <path d="M28 58 C28 48 35 38 42 33 C41 36 40 40 40 44 C36 48 34 53 34 58 C34 64 37 70 41 74 C36 70 28 64 28 58 Z" fill="url(#preloaderGoldGrad)" opacity="0.75" />
+          <path d="M92 58 C92 48 85 38 78 33 C79 36 80 40 80 44 C84 48 86 53 86 58 C86 64 83 70 79 74 C84 70 92 64 92 58 Z" fill="url(#preloaderGoldGrad)" opacity="0.75" />
+          
+          <text x="60" y="88" text-anchor="middle" font-family="'Cinzel', serif" font-size="7" font-weight="600" fill="url(#preloaderGoldGrad)" letter-spacing="2">MCM LVII</text>
+        </svg>
+      </div>
+
+      <!-- Grand Typography -->
+      <h1 class="preloader-brand">KOCHKA</h1>
+      <div class="preloader-subtitle" id="preloader-subtitle">Heritage Art Hall</div>
+      <div class="preloader-provenance" id="preloader-provenance">Permanent Sanctuary · Est. 1957</div>
+
+      <!-- Hairline Progress Bar -->
+      <div class="preloader-track" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="preloader-fill" id="preloader-fill"></div>
+      </div>
+
+      <!-- Curatorial Phase & Percent -->
+      <div class="preloader-status" id="preloader-status">Illuminating the Grand Gallery</div>
+      <div class="preloader-percent" id="preloader-percent">0%</div>
+    </div>
+  </aside>
+
+  <!-- SUBTLE NOISE TEXTURE -->
+  <div class="texture-overlay" aria-hidden="true"></div>
+
+  <!-- DYNAMIC MOUSE TRACKING SPOTLIGHT -->
+  <div class="mouse-spotlight" aria-hidden="true"></div>
+
+  <!-- GLOBAL MULTI-LANGUAGE DOCK (EN / AR / RU) -->
+  <aside class="lang-selector-dock" id="lang-selector" aria-label="Language Selector">
+    <button class="lang-btn active" data-lang="en" title="English">EN</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" data-lang="ar" title="العربية">AR</button>
+    <span class="lang-divider">/</span>
+    <button class="lang-btn" data-lang="ru" title="Русский">RU</button>
+  </aside>
+
+  <!-- MAIN STAGE WRAPPER -->
+  <main class="stage-viewport">
+    
+    <!-- THE INNER CREAM CANVAS (Editorial Art Sheet 921 × 649) -->
+    <div class="gallery-sheet" id="gallery-sheet">
+      
+      <!-- 1. AUTHENTIC HERO CANVAS BASE PLATE -->
+      <img src="assets/hero_canvas_plate_cats.png" 
+           alt="Kochka Heritage Art Hall — The Art That Keeps Speaking" 
+           class="canvas-base-plate">
+
+      <!-- 2. INTERACTIVE TOP NAVIGATION BAR (Exact Hotspots) -->
+      <header class="interactive-nav-overlay">
+        
+        <!-- Curatorial Menu Trigger (+) -->
+        <button class="nav-trigger-btn" id="menu-trigger" aria-label="Open Curatorial Directory" title="Curatorial Directory (+)">
+        </button>
+
+        <!-- Center Brand Insignia Hotspot (Kochka Script) -->
+        <a href="#" class="brand-insignia" aria-label="Kochka Heritage Art Hall" title="Kochka Heritage Art Hall">
+        </a>
+
+        <!-- Tickets Booking Trigger Hotspot -->
+        <button class="tickets-btn" id="tickets-trigger" aria-label="Reserve Gallery Tickets" title="Reserve Gallery Tickets">
+          <span class="tickets-btn-text">TICKETS</span>
+        </button>
+
+      </header>
+
+      <!-- 3. INTERACTIVE 5D VOLUMETRIC BAROQUE FRAMES (Multi-Plane Spatial Engine) -->
+      
+      <!-- Top-Left Baroque Frame: Duchess Blanche in Lace -->
+      <div class="interactive-frame-layer frame-top-left" data-artwork-key="top-left" title="Click to inspect: Duchess Blanche of the Royal Order (1957)">
+        <div class="frame-volumetric-depth" aria-hidden="true">
+          <img src="assets/frame_top_left_cat.png" alt="" aria-hidden="true">
+        </div>
+        <div class="frame-moulding-plane">
+          <img src="assets/frame_top_left_cat.png" alt="Duchess Blanche of the Royal Order">
+        </div>
+        <div class="frame-sheen" aria-hidden="true"></div>
+        <div class="frame-varnish-glare" aria-hidden="true"></div>
+      </div>
+
+      <!-- Center Round Masterpiece: Empress Genevieve in Crimson -->
+      <div class="interactive-frame-layer frame-center-oval" data-artwork-key="center-oval" title="Click to inspect: Empress Genevieve in Crimson (1963)">
+        <div class="frame-volumetric-depth" aria-hidden="true">
+          <img src="assets/frame_center_round_cat.png" alt="" aria-hidden="true">
+        </div>
+        <div class="frame-moulding-plane">
+          <img src="assets/frame_center_round_cat.png" alt="Empress Genevieve in Crimson">
+        </div>
+        <div class="frame-sheen" aria-hidden="true"></div>
+        <div class="frame-varnish-glare" aria-hidden="true"></div>
+      </div>
+
+      <!-- Foreground Interlaced Typography Layer (Weaving "SPEAKING" & "KEEPS" over frame) -->
+      <img src="assets/typography_foreground_overlay_perfect.png" 
+           alt="" 
+           class="typography-interlace-overlay" 
+           aria-hidden="true">
+
+      <!-- Bottom-Right Baroque Frame: Nocturne in Black -->
+      <div class="interactive-frame-layer frame-bottom-right" data-artwork-key="bottom-right" title="Click to inspect: Nocturne: The Obsidian Panther (1968)">
+        <div class="frame-volumetric-depth" aria-hidden="true">
+          <img src="assets/frame_bottom_right_cat.png" alt="" aria-hidden="true">
+        </div>
+        <div class="frame-moulding-plane">
+          <img src="assets/frame_bottom_right_cat.png" alt="Nocturne: The Obsidian Panther">
+        </div>
+        <div class="frame-sheen" aria-hidden="true"></div>
+        <div class="frame-varnish-glare" aria-hidden="true"></div>
+      </div>
+
+      <!-- Bottom-Left Gallery Button (Red Square Interactive Portal) -->
+      <a href="#exhibitions" class="interactive-exhibition-card" id="current-exhibition-trigger" role="button" aria-label="Explore Gallery: Centuries of Feline Art" title="Explore Gallery: Centuries of Feline Art">
+        <div class="exhibition-card-body">
+          <h2 class="exhibition-title-line" id="exhibition-card-title">Current Exhibition</h2>
+          <div class="exhibition-subtitle-line" id="exhibition-card-subtitle">Centuries of Feline Art</div>
+          <p class="exhibition-desc-line" id="exhibition-card-desc">
+            Explore royal &amp; classical cat portraits from 600 BC to the 20th century.
+          </p>
+          <div class="exhibition-action-row">
+            <span class="exhibition-action-text" id="exhibition-card-cta">Explore Gallery</span>
+            <span class="exhibition-action-arrow" aria-hidden="true">&rarr;</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Bottom-Left Exhibition Frame: Lord Aurelius the Amber (Integrated with Gallery Portal) -->
+      <div class="interactive-frame-layer frame-banner-cat" data-artwork-key="bottom-left" title="Explore Gallery: Centuries of Feline Art">
+        <div class="frame-volumetric-depth" aria-hidden="true">
+          <img src="assets/frame_banner_cat.png" alt="" aria-hidden="true">
+        </div>
+        <div class="frame-moulding-plane">
+          <img src="assets/frame_banner_cat.png" alt="Lord Aurelius the Amber — Featured in Centuries of Feline Art">
+        </div>
+        <div class="frame-sheen" aria-hidden="true"></div>
+        <div class="frame-varnish-glare" aria-hidden="true"></div>
+      </div>
+
+    </div><!-- /.gallery-sheet -->
+
+  </main>
+
+  <!-- ========================================================
+       4. AMBIENT CONTROLS (Sound Ambience Dock)
+  ======================================================== -->
+  <aside class="ambient-controls">
+    <button class="sound-toggle-btn" id="sound-toggle" aria-label="Toggle Museum Ambient Sound" title="Museum Ambience: J.S. Bach — Air on the G String">
+      <span class="sound-pulse-dot"></span>
+      <span class="sound-bars" aria-hidden="true">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </span>
+      <span class="sound-status-text">Sound: Off</span>
+    </button>
+    <audio id="ambient-museum-audio" loop preload="auto">
+      <source src="assets/museum_ambient_bach_air.mp3" type="audio/mpeg">
+      <source src="assets/museum_ambient_bach_air.ogg" type="audio/ogg">
+    </audio>
+  </aside>
+
+  <!-- ========================================================
+       5. MODAL: ARTWORK INSPECTION LIGHTBOX
+  ======================================================== -->
+  <div class="modal-overlay" id="artwork-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-container">
+      <button class="modal-close-btn" aria-label="Close Lightbox">&times;</button>
+      
+      <!-- Artwork Visual Presentation with Deep Zoom (Blueprint Spec Page 4) -->
+      <div class="modal-art-view" id="modal-art-view">
+        <div class="zoom-canvas-container" id="zoom-container">
+          <img src="assets/frame_center_round_cat.png" alt="Empress Genevieve in Crimson" id="modal-artwork-img" class="zoom-artwork-img">
+          <div class="zoom-badge-pill" id="zoom-badge">
+            <span class="zoom-pulse-ring"></span>
+            <span id="zoom-level-text">1.0× Normal</span>
+          </div>
+        </div>
+
+        <!-- Deep Zoom Toolbar -->
+        <div class="zoom-toolbar">
+          <button class="zoom-tool-btn" id="zoom-toggle-btn" title="Toggle 3.5× Deep Zoom Inspection Mode">
+            <span class="zoom-icon">🔍</span>
+            <span class="zoom-label">Deep Zoom (3.5×)</span>
+          </button>
+          <button class="zoom-tool-btn" id="zoom-in-btn" title="Increase Zoom">+</button>
+          <button class="zoom-tool-btn" id="zoom-out-btn" title="Decrease Zoom">&minus;</button>
+          <button class="zoom-tool-btn" id="zoom-reset-btn" title="Reset Zoom">Reset</button>
+        </div>
+
+        <span class="modal-art-tag" id="modal-tag">MASTERPIECE SANCTUARY · ACCESSION #63-14</span>
+      </div>
+
+      <!-- Curatorial Dossier -->
+      <div class="modal-curator-info">
+        <div>
+          <span class="modal-badge" id="modal-badge">Hall of Heritage · Permanent Collection</span>
+          <h2 class="modal-artwork-title" id="modal-title">Empress Genevieve in Crimson</h2>
+          
+          <div class="modal-meta-grid">
+            <div class="meta-item">
+              <span class="meta-label">Artist</span>
+              <span class="meta-val" id="modal-artist">Jean-Luc Moreau & Valery Antonov</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Creation Year / Era</span>
+              <span class="meta-val" id="modal-year">1963 · Modern Era</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Medium</span>
+              <span class="meta-val" id="modal-medium">Oil on oval linen, 24k gold leaf Rococo frame</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Dimensions</span>
+              <span class="meta-val" id="modal-dimensions">88 × 72 cm</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Origin & Culture</span>
+              <span class="meta-val" id="modal-origin">Western Europe · France</span>
+            </div>
+            <div class="meta-item">
+              <span class="meta-label">Curatorial Source</span>
+              <span class="meta-val" id="modal-source" style="color: var(--color-vermilion);">KOCHKA Permanent Sanctuary</span>
+            </div>
+          </div>
+
+          <p class="modal-statement" id="modal-statement">
+            The monumental visual centerpiece of the exhibition. Encased in an opulent baroque oval frame, the Empress's watchful, hypnotic emerald gaze pierces through saturated crimson red tones while wearing an ornate ruby and pearl necklace. It stands as an allegory for feline sovereignty—an art form that keeps speaking across generations.
+          </p>
+        </div>
+
+        <!-- Integrated Audio Guide Player -->
+        <div class="audio-guide-player" id="audio-guide-player">
+          <button class="audio-play-btn" id="audio-play-btn" aria-label="Play Curatorial Commentary">
+            &#9658;
+          </button>
+          <div class="audio-details">
+            <span class="audio-title" id="modal-audio-title">Curator Commentary</span>
+            <div class="audio-waveform" aria-hidden="true">
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+              <span class="waveform-bar"></span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Fine Art Print Store CTA (Blueprint Page 2) -->
+        <button class="print-order-btn" id="print-order-btn" title="Purchase Archival Museum-Grade Canvas Print">
+          <span class="print-icon">&#128444;</span> Order Archival Museum Print &middot; From $85
+        </button>
+
+      </div><!-- /.modal-curator-info -->
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       6. MODAL: TICKETS & PATRON MEMBERSHIP DRAWER (Blueprint Page 3)
+  ======================================================== -->
+  <div class="modal-overlay" id="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title">
+    <div class="modal-container ticket-modal-container">
+      <button class="modal-close-btn" aria-label="Close Tickets Modal">&times;</button>
+      
+      <div class="ticket-header">
+        <span class="modal-badge">Admission &amp; Patronage</span>
+        <h2 class="modal-artwork-title" id="ticket-modal-title">Reserve Gallery Access</h2>
+        <p style="font-size: 13px; color: var(--color-charcoal-muted); margin-top: 6px;">
+          Experience 'The Art That Keeps Speaking' in the historic grand wing of Heritage Art Hall.
+        </p>
+
+        <!-- Patron Tiers Tab Toggle (Blueprint Spec Page 3) -->
+        <div class="patron-tabs-toggle">
+          <button class="patron-tab-btn active" id="tab-daily-btn">Daily Passes</button>
+          <button class="patron-tab-btn" id="tab-patron-btn">Patron Memberships ($/mo)</button>
+        </div>
+      </div>
+
+      <!-- Option Group 1: Daily Tickets -->
+      <div class="ticket-options" id="daily-ticket-options">
+        
+        <div class="ticket-tier-row selected">
+          <div class="tier-info">
+            <h4>General Admission</h4>
+            <p>Access to all exhibition wings + digital audio tour pass</p>
+          </div>
+          <span class="tier-price">$28</span>
+        </div>
+
+        <div class="ticket-tier-row">
+          <div class="tier-info">
+            <h4>Curatorial Guided Tour</h4>
+            <p>90-minute small-group tour led by Head Curator Moreau</p>
+          </div>
+          <span class="tier-price">$65</span>
+        </div>
+
+        <div class="ticket-tier-row">
+          <div class="tier-info">
+            <h4>Nocturne: Evening at the Hall</h4>
+            <p>After-hours private viewing with string quartet &amp; vintage champagne</p>
+          </div>
+          <span class="tier-price">$95</span>
+        </div>
+
+      </div>
+
+      <!-- Option Group 2: Patron Memberships (Blueprint Spec Page 3) -->
+      <div class="ticket-options" id="monthly-patron-options" style="display: none;">
+        
+        <div class="ticket-tier-row">
+          <div class="tier-info">
+            <h4>Friend of Kochka</h4>
+            <p>Newsletter access, basic gallery browsing, and monthly featured spotlights.</p>
+          </div>
+          <span class="tier-price">Free</span>
+        </div>
+
+        <div class="ticket-tier-row selected">
+          <div class="tier-info">
+            <h4>Gallery Patron</h4>
+            <p>Full audio-guide access, deep-zoom high-res downloads, and private virtual exhibition invites.</p>
+          </div>
+          <span class="tier-price">$9<small>/mo</small></span>
+        </div>
+
+        <div class="ticket-tier-row">
+          <div class="tier-info">
+            <h4>Medici Circle</h4>
+            <p>Physical quarterly art prints mailed home, early access to new digital wings, and curator events.</p>
+          </div>
+          <span class="tier-price">$25<small>/mo</small></span>
+        </div>
+
+      </div>
+
+      <button class="checkout-btn" id="checkout-btn">
+        Proceed to Reservation
+      </button>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       7. MODAL: CURATORIAL DIRECTORY & ARCHIVE (+)
+  ======================================================== -->
+  <div class="modal-overlay" id="menu-modal" role="dialog" aria-modal="true" aria-labelledby="menu-modal-title">
+    <div class="modal-container menu-modal-container">
+      <button class="modal-close-btn" aria-label="Close Menu">&times;</button>
+      
+      <span class="modal-badge" style="color: var(--color-vermilion-bright);">Brand Identity & Curatorial Archive · Est. 1957</span>
+      <h2 class="modal-artwork-title" id="menu-modal-title" style="color: #fff; font-size: 28px; letter-spacing: 0.08em;">
+        KOCHKA DIRECTORY
+      </h2>
+      <p style="font-size: 13px; color: rgba(255, 255, 255, 0.75); margin-top: 6px; margin-bottom: 24px; font-family: var(--font-secondary);">
+        A global digital museum of classical and contemporary feline art across centuries.
+      </p>
+
+      <!-- BRAND CORE CONCEPT PILLARS (Brand Catalogue Spec) -->
+      <div class="concept-pillars-wrapper">
+        <span class="concept-section-tag">Core Concept · Feline Art Across Centuries</span>
+        <div class="concept-grid">
+          <div class="concept-pillar-card">
+            <span class="pillar-icon">&#127963;</span>
+            <h4>Global Heritage</h4>
+            <p>Historic paintings from diverse cultures and classical epochs.</p>
+          </div>
+          <div class="concept-pillar-card">
+            <span class="pillar-icon">&#128396;</span>
+            <h4>Modern Curation</h4>
+            <p>Contemporary artistic interpretations of cats in modern art.</p>
+          </div>
+          <div class="concept-pillar-card">
+            <span class="pillar-icon">&#129517;</span>
+            <h4>Digital Immersion</h4>
+            <p>Sophisticated gallery web experience built for art lovers.</p>
+          </div>
+        </div>
+      </div>
+
+      <ul class="menu-nav-list">
+        <li class="menu-nav-item">
+          <a href="#exhibitions">
+            <span class="nav-idx">01</span> Centuries Archive Grid (Filterable)
+          </a>
+        </li>
+        <li class="menu-nav-item">
+          <a href="#collection">
+            <span class="nav-idx">02</span> The Feline Nobility Studies (1957–1975)
+          </a>
+        </li>
+        <li class="menu-nav-item">
+          <a href="#tickets">
+            <span class="nav-idx">03</span> Reserve Gallery Access
+          </a>
+        </li>
+        <li class="menu-nav-item">
+          <a href="#exhibitions">
+            <span class="nav-idx">04</span> Public Domain Museum Resources
+          </a>
+        </li>
+        <li class="menu-nav-item">
+          <a href="#artwork">
+            <span class="nav-idx">05</span> Masterpiece Sanctuary Lightbox
+          </a>
+        </li>
+      </ul>
+
+      <p style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4);">
+        742 Boulevard des Arts · Open Tuesday–Sunday 10:00–21:00
+      </p>
+
+    </div>
+  </div>
+
+  <!-- ========================================================
+       8. MODAL: FILTERABLE EXHIBITIONS & CENTURIES GRID (Blueprint Spec Page 3 & 4)
+  ======================================================== -->
+  <div class="modal-overlay" id="exhibitions-modal" role="dialog" aria-modal="true" aria-labelledby="exhibitions-modal-title">
+    <div class="modal-container exhibitions-modal-container">
+      <button class="modal-close-btn" aria-label="Close Exhibitions">&times;</button>
+      
+      <div class="exhibitions-header">
+        <span class="modal-badge">Curatorial Archive · 02. Exhibitions Grid</span>
+        <h2 class="modal-artwork-title" id="exhibitions-modal-title" style="color: #fff; font-size: 32px; letter-spacing: 0.06em;">
+          CENTURIES OF FELINE ART
+        </h2>
+        <p style="font-size: 13.5px; color: rgba(255, 255, 255, 0.75); margin-top: 6px; font-family: var(--font-secondary);">
+          Filterable global museum collection spanning Ancient Egypt, Dutch Golden Age, Japanese Ukiyo-e, and 20th-century European Modernism.
+        </p>
+      </div>
+
+      <!-- DYNAMIC FILTER TOOLBAR (Blueprint Spec Page 4) -->
+      <div class="filter-toolbar">
+        <!-- Era Filter Row -->
+        <div class="filter-row">
+          <span class="filter-label">Era / Epoch:</span>
+          <div class="filter-chips" id="filter-era-chips">
+            <button class="filter-chip active" data-filter="all">All Centuries</button>
+            <button class="filter-chip" data-filter="ancient">Ancient &amp; Classical (B.C. – 1400s)</button>
+            <button class="filter-chip" data-filter="baroque">Renaissance &amp; Baroque (1500s – 1700s)</button>
+            <button class="filter-chip" data-filter="modern">Modern &amp; 19th C. (1800s – Present)</button>
+          </div>
+        </div>
+
+        <!-- Region Filter Row -->
+        <div class="filter-row">
+          <span class="filter-label">Geography:</span>
+          <div class="filter-chips" id="filter-region-chips">
+            <button class="filter-chip active" data-filter="all">All Regions</button>
+            <button class="filter-chip" data-filter="mediterranean">Mediterranean &amp; Nile</button>
+            <button class="filter-chip" data-filter="europe">Western &amp; Central Europe</button>
+            <button class="filter-chip" data-filter="asia">East Asia &amp; Japan</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FILTERABLE ARTWORK CARDS GRID -->
+      <div class="exhibitions-cards-grid" id="exhibitions-cards-grid">
+        
+        <!-- 1. Empress Genevieve in Crimson -->
+        <article class="archive-card" data-artwork-key="center-oval" data-era="modern" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/frame_center_oval_cat.png" alt="Empress Genevieve in Crimson" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Masterpiece Sanctuary</span>
+              <h3 class="archive-card-title">Empress Genevieve in Crimson</h3>
+              <p class="archive-card-meta">Valery Antonov &amp; Moreau · 1963 · France</p>
+            </div>
+            <span class="archive-source-pill">KOCHKA PERMANENT</span>
+          </div>
+        </article>
+
+        <!-- 2. Duchess Blanche of the Royal Order -->
+        <article class="archive-card" data-artwork-key="top-left" data-era="modern" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/frame_top_left_cat.png" alt="Duchess Blanche of the Royal Order" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Baroque Revival</span>
+              <h3 class="archive-card-title">Duchess Blanche of the Royal Order</h3>
+              <p class="archive-card-meta">Valery Antonov · 1957 · St. Petersburg</p>
+            </div>
+            <span class="archive-source-pill">KOCHKA PERMANENT</span>
+          </div>
+        </article>
+
+        <!-- 3. Nocturne: The Obsidian Panther -->
+        <article class="archive-card" data-artwork-key="bottom-right" data-era="modern" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/frame_bottom_right_cat.png" alt="Nocturne: The Obsidian Panther" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Gallery Room III</span>
+              <h3 class="archive-card-title">Nocturne: The Obsidian Panther</h3>
+              <p class="archive-card-meta">Valery Antonov · 1968 · Geneva</p>
+            </div>
+            <span class="archive-source-pill">KOCHKA PERMANENT</span>
+          </div>
+        </article>
+
+        <!-- 4. Lord Aurelius the Amber -->
+        <article class="archive-card" data-artwork-key="bottom-left" data-era="modern" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/frame_banner_cat.png" alt="Lord Aurelius the Amber" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Modernist Impasto</span>
+              <h3 class="archive-card-title">Lord Aurelius the Amber</h3>
+              <p class="archive-card-meta">Elena Rostova · 1971 · Paris</p>
+            </div>
+            <span class="archive-source-pill">KOCHKA PERMANENT</span>
+          </div>
+        </article>
+
+        <!-- 5. Goddess Bastet with Gold Earrings (Ancient Egypt) -->
+        <article class="archive-card" data-artwork-key="bastet" data-era="ancient" data-region="mediterranean">
+          <div class="archive-card-thumb">
+            <img src="assets/cat_bastet_ancient.jpg" alt="Goddess Bastet with Gold Earrings" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Ancient Egyptian Dynasty</span>
+              <h3 class="archive-card-title">Goddess Bastet with Gold Earrings</h3>
+              <p class="archive-card-meta">Saqqara Sculptor · c. 600 BC · Egypt</p>
+            </div>
+            <span class="archive-source-pill">MET OPEN ACCESS</span>
+          </div>
+        </article>
+
+        <!-- 6. Feline Guard of the Golden Age (Dutch Baroque) -->
+        <article class="archive-card" data-artwork-key="dutch" data-era="baroque" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/cat_dutch_rijks.jpg" alt="Feline Guard of the Golden Age" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Dutch Golden Age</span>
+              <h3 class="archive-card-title">Feline Guard of the Golden Age</h3>
+              <p class="archive-card-meta">School of Jan Steen · c. 1645 · Amsterdam</p>
+            </div>
+            <span class="archive-source-pill">RIJKSMUSEUM API</span>
+          </div>
+        </article>
+
+        <!-- 7. Cats of the Fifty-Three Stations (Kuniyoshi Ukiyo-e) -->
+        <article class="archive-card" data-artwork-key="kuniyoshi" data-era="modern" data-region="asia">
+          <div class="archive-card-thumb">
+            <img src="assets/cat_kuniyoshi_ukiyo.jpg" alt="Cats of the Fifty-Three Stations" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Edo Period Ukiyo-e</span>
+              <h3 class="archive-card-title">Cats of the Fifty-Three Stations</h3>
+              <p class="archive-card-meta">Utagawa Kuniyoshi · 1850 · Edo, Japan</p>
+            </div>
+            <span class="archive-source-pill">WIKIMEDIA COMMONS</span>
+          </div>
+        </article>
+
+        <!-- 8. Tournée du Chat Noir (Steinlen Montmartre) -->
+        <article class="archive-card" data-artwork-key="steinlen" data-era="modern" data-region="europe">
+          <div class="archive-card-thumb">
+            <img src="assets/cat_chat_noir_steinlen.jpg" alt="Tournée du Chat Noir" loading="lazy" decoding="async">
+          </div>
+          <div class="archive-card-body">
+            <div>
+              <span class="archive-badge">Belle Époque Art Nouveau</span>
+              <h3 class="archive-card-title">Tournée du Chat Noir</h3>
+              <p class="archive-card-meta">Théophile Steinlen · 1896 · Montmartre</p>
+            </div>
+            <span class="archive-source-pill">ART INSTITUTE OF CHICAGO</span>
+          </div>
+        </article>
+
+      </div><!-- /.exhibitions-cards-grid -->
+
+      <!-- CURATORIAL SOURCING & OPEN ACCESS RESOURCES (Blueprint Page 6) -->
+      <div class="sourcing-section">
+        <h4 class="sourcing-title">Curatorial Resources &amp; Open Access Archives</h4>
+        <div class="sourcing-grid">
+          <div class="sourcing-item">
+            <h5>Metropolitan Museum of Art</h5>
+            <p>The Met Open Access API provides thousands of digitized high-res classical feline artifacts &amp; antiquities.</p>
+          </div>
+          <div class="sourcing-item">
+            <h5>Rijksmuseum Amsterdam</h5>
+            <p>Exceptional open repository of Dutch Golden Age paintings, chiaroscuro portraits, and still lifes.</p>
+          </div>
+          <div class="sourcing-item">
+            <h5>Wikimedia Commons</h5>
+            <p>Vast global repositories of Japanese Edo-period Ukiyo-e feline woodblock prints (Utagawa Kuniyoshi).</p>
+          </div>
+          <div class="sourcing-item">
+            <h5>Art Institute of Chicago</h5>
+            <p>Public API access for modern, impressionist, and Art Nouveau feline masterworks and lithographs.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
